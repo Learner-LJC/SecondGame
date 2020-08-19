@@ -74,7 +74,7 @@ using UnityEngine;
             this.InitGameObject(Characters[character.entityId], character);
         }
 
-        private void InitGameObject(UnityEngine.GameObject go, Character character)
+        private void InitGameObject(GameObject go, Character character)
         {
             go.transform.position = GameObjectTool.LogicToWorld(character.position);
             go.transform.forward = GameObjectTool.LogicToWorld(character.direction);
@@ -89,7 +89,7 @@ using UnityEngine;
             if (pc != null)
             {
                 //info,id=entityid
-                if (character.entityId==Models.User.Instance.CurrentCharacter.Id)
+                if (character.entityId== User.Instance.CurrentCharacter.Id)
                 {
                     User.Instance.CurrentCharacterObject = go;
                     MainPlayerCamera.Instance.player = go;

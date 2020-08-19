@@ -18,18 +18,19 @@ public class UIMinimap : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        MinimapManager.Instance.minimap = this;
+        Debug.LogWarning("UI Minimap Start" + this.GetInstanceID());
+        MinimapManager.Instance.Minimap = this;
         this.UpdateMap();
     }
 
     public void UpdateMap()
     {
         this.mapName.text = User.Instance.CurrentMapData.Name;
-
+        
         this.minimap.overrideSprite = MinimapManager.Instance.LoadSpriteMinimap();
         this.minimap.SetNativeSize();
         this.minimap.transform.localPosition = Vector3.zero;
-        this.MinimapBuildingBox = MinimapManager.Instance.MinimapBuildingBox;
+        this.MinimapBuildingBox = MinimapManager.Instance.MinimapBounldingBox;
         this.playerTransform = null;
     }
 	// Update is called once per frame
@@ -37,7 +38,7 @@ public class UIMinimap : MonoBehaviour
     {
         if (playerTransform==null)
         {
-            playerTransform = MinimapManager.Instance.PlayerTansform;
+            playerTransform = MinimapManager.Instance.PlayerTransform;
         }
         if (MinimapBuildingBox==null||playerTransform==null) return;
         

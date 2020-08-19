@@ -5,21 +5,30 @@ using System.Text;
 using Models;
 using UnityEngine;
 
-namespace Managers
-{
+
     class MinimapManager : Singleton<MinimapManager>
     {
-        public UIMinimap minimap;
+        //
+        private UIMinimap minimap;
+        public UIMinimap Minimap
+        {
+            get { return minimap; }
+            set {
+                minimap = value;
+                Debug.LogWarningFormat("MinimapManager.Instance.Minimap[{0}] Set", minimap.GetInstanceID());
+            }
+        }
+        //
         private Collider minimapBoundingBox;
-        public Collider MinimapBuildingBox
+        public Collider MinimapBounldingBox
         {
             get { return minimapBoundingBox; }
         }
-        public Transform PlayerTansform
+        public Transform PlayerTransform
         {
             get
             {
-                if (User.Instance.CurrentCharacter==null)
+                if (User.Instance.CurrentCharacterObject==null)
                     return null;
                 return User.Instance.CurrentCharacterObject.transform;
 
@@ -41,4 +50,4 @@ namespace Managers
             }
         }
     }
-}
+

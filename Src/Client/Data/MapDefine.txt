@@ -6,7 +6,7 @@
     "SubType": "Normal",
     "PKMode": false,
     "Resource": "MainCity",
-    "MiniMap": "buluzhen"
+    "MiniMap": "buluzheng"
   },
   "2": {
     "ID": 2,

@@ -18,10 +18,11 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
 
     }
 
-    void Start()
+    void Awake()
     {
         if (global)
         {
+            Debug.LogWarningFormat("{0}[{1}] Awake", typeof(T), this.GetInstanceID());
             if (instance != null && instance != this.gameObject.GetComponent<T>())
             {
                 Destroy(this.gameObject);

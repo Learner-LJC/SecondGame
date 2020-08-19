@@ -1,44 +1,57 @@
 ﻿using Models;
+using SkillBridge.Message;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIMain : MonoBehaviour {
+public class UIMain :MonoSingleton<UIMain>
+{
 
-    public Text avatarName;
-    public Text avatarLevel;
+        public Text avatarName;
+        public Text avatarLevel;
 
-    //public Text avaterName1;
 
-    //public Text avaterLevel1;
-    // Use this for initialization
-	void Start () {
-        this.UpdateAvatar();
-        //this.UpdateAvater1();
-	}
+        protected override void  OnStart()
+        {
+            this.UpdateAvatar();
+        }
 
-    //void UpdateAvater1()
-    //{
-    //    this.avaterName1.text = string.Format("{0}[{1}]", User.Instance.CurrentCharacter.Name,
-    //        User.Instance.CurrentCharacter.Id);
-    //    this.avaterLevel1.text = User.Instance.CurrentCharacter.Level.ToString();
-    //}
-    void UpdateAvatar()
+
+        void UpdateAvatar()
+        {
+            this.avatarName.text = string.Format("{0}[{1}]", User.Instance.CurrentCharacter.Name, User.Instance.CurrentCharacter.Id);
+            this.avatarLevel.text = User.Instance.CurrentCharacter.Level.ToString();
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
+
+        public void BackToCharSelect()
+        {
+            SceneManager.Instance.LoadScene("CharSelect");
+            Services.UserService.Instance.SendGameLeave();
+
+        }
+    public void OnClickTest()
     {
-        this.avatarName.text = string.Format("{0}[{1}]", User.Instance.CurrentCharacter.Name, User.Instance.CurrentCharacter.Id);
-        this.avatarLevel.text = User.Instance.CurrentCharacter.Level.ToString();
+        UITest test=UIManager.Instance.Show<UITest>();
+        test.SetTile("这是一个测试UI");
+        test.OnClose += Test_OnClose;
+
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
-    public void BackToCharSelect()
+    private void Test_OnClose(UIWindow sender, UIWindow.WindowResult result)
     {
-        SceneManager.Instance.LoadScene("CharSelect");
-        Services.UserService.Instance.SendGameLeave();
-        
+        //(sender as UITest).name
+        MessageBox.Show("点击对话框的：" + result , "对话框的响应结果为：" , MessageBoxType.Information);
+    }
+    public void OnClick()
+    {
+        UIManager.Instance.Show<UIBag>();
     }
 }
