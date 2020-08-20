@@ -1,76 +1,146 @@
-2020-08-18 12:40:38,893 [ 1] INFO  Unity: LoadingManager start
-2020-08-18 12:40:42,156 [ 1] INFO  Unity: DataManager > DataManager()
-2020-08-18 12:40:49,395 [ 1] INFO  Unity: UserLoginRequest::user :user001 psw:111
-2020-08-18 12:40:49,397 [ 1] INFO  Unity: ConnectToServer() Start 
-2020-08-18 12:40:49,402 [ 1] INFO  Unity: DoConnect
-2020-08-18 12:40:49,404 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2020-08-18 12:40:49,408 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2020-08-20 09:18:34,594 [ 1] INFO  Unity: LoadingManager start
+2020-08-20 09:18:38,395 [ 1] INFO  Unity: DataManager > DataManager()
+2020-08-20 09:18:47,714 [ 1] INFO  Unity: UserLoginRequest::user :user001 psw:111
+2020-08-20 09:18:47,722 [ 1] INFO  Unity: ConnectToServer() Start 
+2020-08-20 09:18:47,738 [ 1] INFO  Unity: DoConnect
+2020-08-20 09:18:47,741 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2020-08-20 09:18:47,851 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2020-08-18 12:40:49,414 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2020-08-18 12:40:49,544 [ 1] INFO  Unity: OnLogin:Success [None]
-2020-08-18 12:40:49,546 [ 1] INFO  Unity: LoadLevel: CharSelect
-2020-08-18 12:40:49,839 [ 1] INFO  Unity: LevelLoadCompleted:1
-2020-08-18 12:40:52,930 [ 1] INFO  Unity: Select Char:[1]ÁÎ¿¡²Å01[Warrior]
-2020-08-18 12:40:53,960 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2020-08-18 12:40:53,999 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2020-08-18 12:40:54,000 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
-2020-08-18 12:40:54,003 [ 1] INFO  Unity: AddCharacter:2:ÁÎ¿¡²Å01 Map:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2020-08-18 12:40:54,007 [ 1] INFO  Unity: LoadLevel: MainCity
-2020-08-18 12:40:54,008 [ 1] INFO  Unity: OnMapCharacterEnter:1
-2020-08-18 12:40:54,009 [ 1] INFO  Unity: LoadLevel: MainCity
-2020-08-18 12:40:54,608 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2020-08-20 09:18:47,883 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2020-08-20 09:18:53,516 [ 1] INFO  Unity: OnLogin:Success [None]
+2020-08-20 09:18:53,522 [ 1] INFO  Unity: LoadLevel: CharSelect
+2020-08-20 09:18:55,635 [ 1] INFO  Unity: LevelLoadCompleted:1
+2020-08-20 09:18:56,914 [ 1] INFO  Unity: Select Char:[1]ÁÎ¿¡²Å01[Warrior]
+2020-08-20 09:18:58,035 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2020-08-20 09:18:58,301 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2020-08-20 09:18:58,311 [ 1] INFO  Unity: ItemManager:Init[Id:1,Count:5]
+2020-08-20 09:18:58,312 [ 1] INFO  Unity: ItemManager:Init[Id:2,Count:100]
+2020-08-20 09:18:58,313 [ 1] INFO  Unity: ItemManager:Init[Id:3,Count:100]
+2020-08-20 09:18:58,396 [ 1] ERROR Unity: Message handler exception:, Object reference not set to an instance of an object, Assembly-CSharp,   at Managers.BagManager.Reset () [0x0003a] in D:\2\s8\SecondGame\Src\Client\Assets\Scripts\Managers\BagManager.cs:36 
+  at Managers.BagManager.Init (SkillBridge.Message.NBagInfo info) [0x00075] in D:\2\s8\SecondGame\Src\Client\Assets\Scripts\Managers\BagManager.cs:28 
+  at Services.UserService.OnGameEnter (System.Object sender, SkillBridge.Message.UserGameEnterResponse response) [0x00065] in D:\2\s8\SecondGame\Src\Client\Assets\Scripts\Services\UserService.cs:252 
+  at Network.MessageDistributer`1[System.Object].RaiseEvent[UserGameEnterResponse] (System.Object sender, SkillBridge.Message.UserGameEnterResponse msg) [0x00000] in <filename unknown>:0 
+2020-08-20 09:18:58,399 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, Managers.BagManager.Reset () (at Assets/Scripts/Managers/BagManager.cs:36)
+Managers.BagManager.Init (SkillBridge.Message.NBagInfo info) (at Assets/Scripts/Managers/BagManager.cs:28)
+Services.UserService.OnGameEnter (System.Object sender, SkillBridge.Message.UserGameEnterResponse response) (at Assets/Scripts/Services/UserService.cs:252)
+Network.MessageDistributer`1[System.Object].RaiseEvent[UserGameEnterResponse] (System.Object sender, SkillBridge.Message.UserGameEnterResponse msg)
+}</args></log4net.Error>
+2020-08-20 09:18:58,501 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
+2020-08-20 09:18:58,508 [ 1] INFO  Unity: AddCharacter:1:ÁÎ¿¡²Å01 Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2020-08-20 09:18:58,524 [ 1] INFO  Unity: LoadLevel: MainCity
+2020-08-20 09:18:58,526 [ 1] INFO  Unity: OnMapCharacterEnter:1
+2020-08-20 09:18:58,527 [ 1] INFO  Unity: LoadLevel: MainCity
+2020-08-20 09:19:02,301 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2020-08-18 12:40:54,713 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2020-08-20 09:19:02,340 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2020-08-18 12:40:54,730 [ 1] WARN  Unity: MainPlayerCamera[-68344] Awake
+2020-08-20 09:19:02,364 [ 1] WARN  Unity: MainPlayerCamera[-7800] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:25)
 
-2020-08-18 12:40:54,731 [ 1] WARN  Unity: GameObjectManager[-68296] Awake
+2020-08-20 09:19:02,368 [ 1] WARN  Unity: GameObjectManager[-7752] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:25)
 
-2020-08-18 12:40:54,737 [ 1] WARN  Unity: UIMain[45334] Awake
+2020-08-20 09:19:02,388 [ 1] WARN  Unity: UIMain[19678] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:25)
 
-2020-08-18 12:40:54,738 [ 1] WARN  Unity: UIWorldElementManager[46196] Awake
+2020-08-20 09:19:02,390 [ 1] WARN  Unity: UIWorldElementManager[20548] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:25)
 
-2020-08-18 12:40:54,774 [ 1] INFO  Unity: LevelLoadCompleted:1
-2020-08-18 12:40:54,778 [ 1] WARN  Unity: UI Minimap Start43108
+2020-08-20 09:19:02,468 [ 1] INFO  Unity: LevelLoadCompleted:1
+2020-08-20 09:19:02,473 [ 1] WARN  Unity: UI Minimap Start17442
 UnityEngine.Debug:LogWarning(Object)
 UIMinimap:Start() (at Assets/Scripts/UI/Minimap/UIMinimap.cs:21)
 
-2020-08-18 12:40:54,778 [ 1] WARN  Unity: MinimapManager.Instance.Minimap[43108] Set
+2020-08-20 09:19:02,477 [ 1] WARN  Unity: MinimapManager.Instance.Minimap[17442] Set
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MinimapManager:set_Minimap(UIMinimap) (at Assets/Scripts/Managers/MinimapManager.cs:18)
 UIMinimap:Start() (at Assets/Scripts/UI/Minimap/UIMinimap.cs:22)
 
-2020-08-18 12:40:55,359 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2020-08-20 09:19:03,627 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2020-08-18 12:40:55,376 [ 1] WARN  Unity: MainPlayerCamera[-73816] Awake
+2020-08-20 09:19:03,651 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+
+2020-08-20 09:19:03,670 [ 1] WARN  Unity: MainPlayerCamera[-13314] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:25)
 
-2020-08-18 12:40:55,377 [ 1] WARN  Unity: GameObjectManager[-73768] Awake
+2020-08-20 09:19:03,671 [ 1] WARN  Unity: GameObjectManager[-13266] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:25)
 
-2020-08-18 12:40:55,377 [ 1] WARN  Unity: UIMain[48966] Awake
+2020-08-20 09:19:03,672 [ 1] WARN  Unity: UIMain[24386] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:25)
 
-2020-08-18 12:40:55,378 [ 1] WARN  Unity: UIWorldElementManager[49828] Awake
+2020-08-20 09:19:03,673 [ 1] WARN  Unity: UIWorldElementManager[25256] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:25)
 
-2020-08-18 12:40:55,408 [ 1] INFO  Unity: LevelLoadCompleted:1
-2020-08-18 12:42:13,100 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2020-08-18 12:42:13,100 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2020-08-20 09:19:03,708 [ 1] INFO  Unity: LevelLoadCompleted:1
+2020-08-20 09:20:47,033 [ 1] INFO  Unity: LoadLevel: CharSelect
+2020-08-20 09:20:47,035 [ 1] INFO  Unity: UserGameLeaveRequest
+2020-08-20 09:20:47,272 [ 1] INFO  Unity: OnMapCharacterLeave:CharID:1
+2020-08-20 09:20:47,276 [ 1] INFO  Unity: RemoveCharacter:1
+2020-08-20 09:20:47,281 [ 1] INFO  Unity: OnGameLeave:Success [None]
+2020-08-20 09:20:47,283 [ 1] INFO  Unity: Character_1_ÁÎ¿¡²Å01 OnDestroy :ID:1 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
+2020-08-20 09:20:47,392 [ 1] INFO  Unity: LevelLoadCompleted:1
+2020-08-20 09:20:48,547 [ 1] INFO  Unity: Select Char:[2]ÁÎ¿¡²Å02[Warrior]
+2020-08-20 09:20:51,494 [ 1] INFO  Unity: UserGameEnterRequest::characterId :1
+2020-08-20 09:20:51,547 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2020-08-20 09:20:51,548 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
+2020-08-20 09:20:51,549 [ 1] INFO  Unity: AddCharacter:2:ÁÎ¿¡²Å02 Map:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2020-08-20 09:20:51,552 [ 1] INFO  Unity: LoadLevel: MainCity
+2020-08-20 09:20:51,553 [ 1] INFO  Unity: OnMapCharacterEnter:1
+2020-08-20 09:20:51,554 [ 1] INFO  Unity: LoadLevel: MainCity
+2020-08-20 09:20:52,300 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+
+2020-08-20 09:20:52,408 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+
+2020-08-20 09:20:52,427 [ 1] WARN  Unity: MainPlayerCamera[-21074] Awake
+UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:25)
+
+2020-08-20 09:20:52,427 [ 1] WARN  Unity: GameObjectManager[-21026] Awake
+UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:25)
+
+2020-08-20 09:20:52,428 [ 1] WARN  Unity: UIMain[28552] Awake
+UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:25)
+
+2020-08-20 09:20:52,429 [ 1] WARN  Unity: UIWorldElementManager[29422] Awake
+UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:25)
+
+2020-08-20 09:20:52,465 [ 1] INFO  Unity: LevelLoadCompleted:1
+2020-08-20 09:20:53,099 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+
+2020-08-20 09:20:53,117 [ 1] WARN  Unity: MainPlayerCamera[-26290] Awake
+UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:25)
+
+2020-08-20 09:20:53,118 [ 1] WARN  Unity: GameObjectManager[-26242] Awake
+UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:25)
+
+2020-08-20 09:20:53,119 [ 1] WARN  Unity: UIMain[32202] Awake
+UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:25)
+
+2020-08-20 09:20:53,120 [ 1] WARN  Unity: UIWorldElementManager[33072] Awake
+UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:25)
+
+2020-08-20 09:20:53,156 [ 1] INFO  Unity: LevelLoadCompleted:1
+2020-08-20 09:21:17,822 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2020-08-20 09:21:17,823 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:181)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:176)
 
-2020-08-18 12:42:13,111 [ 1] INFO  Unity: Character_2_ÁÎ¿¡²Å01 OnDestroy :ID:2 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
+2020-08-20 09:21:17,827 [ 1] INFO  Unity: Character_2_ÁÎ¿¡²Å02 OnDestroy :ID:2 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
