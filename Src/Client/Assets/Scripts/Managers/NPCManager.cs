@@ -7,10 +7,10 @@ using System.Text;
 
 namespace Managers
 {
-    class NPCManager:Singleton<NPCManager>
+    public class NPCManager:Singleton<NPCManager>
     {
         public delegate bool NpcActionHandler(NpcDefine npc);
-        Dictionary<NpcFunction, NpcActionHandler> eventMap = new Dictionary<NpcFunction, NpcActionHandler>();
+        public Dictionary<NpcFunction, NpcActionHandler> eventMap = new Dictionary<NpcFunction, NpcActionHandler>();
 
         public void RegisterNpcEvent(NpcFunction function,NpcActionHandler action)
         {
@@ -23,18 +23,20 @@ namespace Managers
                 eventMap[function] += action;
             }
         }
+		//获取NPC信息
         public NpcDefine GetNpcDefine(int npcId)
         {
             NpcDefine npc = null;
             DataManager.Instance.Npcs.TryGetValue(npcId, out npc);
             return npc;
         }
+		//用户交互函数
         public bool Interactive(int npcId)
         {
             if (DataManager.Instance.Npcs.ContainsKey(npcId))
             {
                 var npc = DataManager.Instance.Npcs[npcId];
-                return Interactive(npcId);
+                return Interactive(npc);
             }
             return false;
         }
@@ -51,7 +53,7 @@ namespace Managers
             return false;
         }
 
-        private bool DoFuntionInteractive(NpcDefine npc)
+        public bool DoFuntionInteractive(NpcDefine npc)
         {
             if (npc.Type != NpcType.Functional)
             {
@@ -64,7 +66,7 @@ namespace Managers
             return eventMap[npc.Function](npc);
         }
 
-        private bool DoTaskInteractive(NpcDefine npc)
+        public bool DoTaskInteractive(NpcDefine npc)
         {
             MessageBox.Show("点击了NPC:" + npc.Name, "NPC对话");
             return true;

@@ -40,9 +40,9 @@
     "LinkTo": 0,
     "Descript": null,
     "Position": {
-      "X": 6815,
-      "Y": 2580,
-      "Z": 774
+      "X": 1394,
+      "Y": 2596,
+      "Z": 805
     },
     "Direction": {
       "X": 0,
@@ -57,9 +57,9 @@
     "LinkTo": 0,
     "Descript": null,
     "Position": {
-      "X": 1394,
-      "Y": 2596,
-      "Z": 805
+      "X": 6815,
+      "Y": 2580,
+      "Z": 774
     },
     "Direction": {
       "X": 0,

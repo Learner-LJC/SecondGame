@@ -24,7 +24,7 @@ namespace Managers
             }
             else
             {
-                Info.Items = new byte[sizeof(BagItem) * this.Unlocked];
+                info.Items = new byte[sizeof(BagItem) * this.Unlocked];
                 Reset();
             }
         }
@@ -33,20 +33,20 @@ namespace Managers
             int i = 0;
             foreach (var kv in ItemManager.Instance.Items)
             {
-                if(kv.Value.Count <= kv.Value.Define.Stacklimit)
+                if(kv.Value.count <= kv.Value.itemDefine.Stacklimit)
                 {
                     this.Items[i].ItemId = (ushort)kv.Key;
-                    this.Items[i].Count = (ushort)kv.Value.Count;
+                    this.Items[i].Count = (ushort)kv.Value.count;
                 }
                  else
                 {
-                    int count = kv.Value.Count;
-                    while (count > kv.Value.Define.Stacklimit)
+                    int count = kv.Value.count;
+                    while (count > kv.Value.itemDefine.Stacklimit)
                     {
                         this.Items[i].ItemId = (ushort)kv.Key;
-                        this.Items[i].Count = (ushort)kv.Value.Define.Stacklimit;
+                        this.Items[i].Count = (ushort)kv.Value.itemDefine.Stacklimit;
                         i++;
-                        count -= kv.Value.Define.Stacklimit;
+                        count -= kv.Value.itemDefine.Stacklimit;
                     }
                     this.Items[i].ItemId = (ushort)kv.Key;
                     this.Items[i].Count = (ushort)count;
@@ -72,11 +72,48 @@ namespace Managers
                 for (int i = 0; i < this.Unlocked; i++)
                 {
                     BagItem* item = (BagItem*)(pt + i * sizeof(BagItem));
-                    *item = item[i];
+                    *item = Items[i];
                 }
             }
             return this.Info;
         }
 
+        public void AddItem(int itemId,int count)
+        {
+            ushort addCount = (ushort)count;
+            for (int i = 0; i < Items.Length; i++)
+            {
+                if (this.Items[i].ItemId == itemId)
+                {
+                    ushort canAdd = (ushort)(DataManager.Instance.Items[itemId].Stacklimit - this.Items[i].Count);
+                    if (canAdd >= addCount)
+                    {
+                        this.Items[i].Count += addCount;
+                        addCount = 0;
+                        break;
+                    }
+                    else
+                    {
+                        this.Items[i].Count += canAdd;
+                        addCount -= canAdd;
+                    }
+                }
+            }
+            if (addCount > 0)
+            {
+                for (int i = 0; i < Items.Length; i++)
+                {
+                    if (this.Items[i].ItemId == 0)
+                    {
+                        this.Items[i].ItemId = (ushort)itemId;
+                        this.Items[i].Count = addCount;
+                    }
+                } 
+            }
+        }
+        public void RemoveItem(int itemId,int count)
+        {
+
+        }
     }
 }

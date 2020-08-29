@@ -1,27 +1,31 @@
 ﻿using Common.Data;
 using Managers;
 using SkillBridge.Message;
-using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using UnityEngine;
 
-namespace Models
-{
-    public class Item
+public class Item {
+
+    public int itemId;
+    public int count;
+    public ItemDefine itemDefine;
+    public Item(NItemInfo info) : this(info.Id, info.Count)
     {
-        public int Id;
-        public int Count;
-        public ItemDefine Define;
-        public Item(NItemInfo item)
-        {
-            this.Id = item.Id;
-            this.Count = item.Count;
-            this.Define = DataManager.Instance.Items[item.Id];
-        }
-        public override string ToString()
-        {
-            return string.Format("Id:{0},Count:{1}", this.Id, this.Count);
-        }
+         
     }
+
+    public Item(int id, int count)
+    {
+        this.itemId = id;
+        this.count = count;
+        DataManager.Instance.Items.TryGetValue(this.itemId, out this.itemDefine);
+        //DataManager.Instance.Equips.TryGetValue(this.itemId, out this.EquipInfo);
+    }
+
+    public override string ToString()
+    {
+        return string.Format("ID {0}  Count {1}",this.itemId, this.count);
+    }
+
 }

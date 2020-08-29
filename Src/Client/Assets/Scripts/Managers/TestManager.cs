@@ -8,8 +8,8 @@ using UnityEngine;
 public class TestManager : Singleton<TestManager> {
 	public void Init()
     {
-        NPCManager.Instance.RegisterNpcEvent(Common.Data.NpcFunction.InvokeShop, OnNpcShop);
-        NPCManager.Instance.RegisterNpcEvent(Common.Data.NpcFunction.InvokeShop, OnNpcInvoke);
+        NPCManager.Instance.RegisterNpcEvent(NpcFunction.InvokeShop,OnNpcInvoke);
+        NPCManager.Instance.RegisterNpcEvent(NpcFunction.InvokeInstance,OnNpcShop);
     }
 
     private bool OnNpcShop(NpcDefine npc)

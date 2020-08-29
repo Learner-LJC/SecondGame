@@ -11,13 +11,13 @@ namespace Common.Data
     {
         None = 0,
         Functional = 1,
-        Task=2,
+        Task,
     }
     public enum NpcFunction
     {
         None = 0,
         InvokeShop = 1,
-        InvokeInsrance = 2,
+        InvokeInstance = 2,
 
     }
     public class NpcDefine
@@ -28,6 +28,7 @@ namespace Common.Data
         public NVector3 Position { get; set; }
         public NpcType Type { get; set; }
         public NpcFunction Function { get; set; }
+
         public int Param { get; set; }
     }
 }

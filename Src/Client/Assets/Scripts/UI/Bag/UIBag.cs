@@ -22,6 +22,7 @@ public class UIBag : UIWindow {
 				slots.AddRange(this.pages[page].GetComponentsInChildren<Image>(true));
             }
         }
+		money.text=User.Instance.CurrentCharacter.Gold.ToString();
 		StartCoroutine(InitBags());
 	}
 	
@@ -38,7 +39,7 @@ public class UIBag : UIWindow {
 			{
 				GameObject go = Instantiate(bagItem, slots[i].transform);
 				var ui = go.GetComponent<UIIconItem>();
-				var def = ItemManager.Instance.Items[item.ItemId].Define;
+				var def = ItemManager.Instance.Items[item.ItemId].itemDefine;
 				ui.SetMainIcon(def.Icon, item.Count.ToString());
 			}
         }
@@ -50,10 +51,23 @@ public class UIBag : UIWindow {
     }
 	public void SetTile(string title)
     {
-		this.money.text = User.Instance.CurrentCharacter.Id.ToString();
+
     }
-	public void OnRest()
-    {
+    void Clear()
+	{
+		for (int i = 0; i < slots.Count; i++)
+		{
+			if (slots[i].transform.childCount > 0)
+			{
+				Destroy(slots[i].transform.GetChild(0).gameObject);
+			}
+		}
+	}
+	//每次整理背包都先销毁在重新生成
+	public void OnReset()
+	{
 		BagManager.Instance.Reset();
+		Clear();
+		StartCoroutine(InitBags());
     }
 }

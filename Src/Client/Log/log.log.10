@@ -1,88 +1,131 @@
-2020-08-20 02:39:17,535 [ 1] INFO  Unity: LoadingManager start
-2020-08-20 02:39:20,684 [ 1] INFO  Unity: DataManager > DataManager()
-2020-08-20 02:39:28,905 [ 1] INFO  Unity: UserLoginRequest::user :user001 psw:111
-2020-08-20 02:39:28,907 [ 1] INFO  Unity: ConnectToServer() Start 
-2020-08-20 02:39:28,911 [ 1] INFO  Unity: DoConnect
-2020-08-20 02:39:28,913 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2020-08-20 02:39:28,917 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2020-08-22 00:05:21,601 [ 1] INFO  Unity: LoadingManager start
+2020-08-22 00:05:24,985 [ 1] INFO  Unity: DataManager > DataManager()
+2020-08-22 00:05:32,249 [ 1] INFO  Unity: UserLoginRequest::user :user001 psw:111
+2020-08-22 00:05:32,250 [ 1] INFO  Unity: ConnectToServer() Start 
+2020-08-22 00:05:32,267 [ 1] INFO  Unity: DoConnect
+2020-08-22 00:05:32,271 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2020-08-22 00:05:32,301 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2020-08-20 02:39:28,920 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2020-08-20 02:39:29,032 [ 1] INFO  Unity: OnLogin:Success [None]
-2020-08-20 02:39:29,033 [ 1] INFO  Unity: LoadLevel: CharSelect
-2020-08-20 02:39:29,322 [ 1] INFO  Unity: LevelLoadCompleted:1
-2020-08-20 02:39:30,561 [ 1] INFO  Unity: Select Char:[1]ÁÎ¿¡²Å01[Warrior]
-2020-08-20 02:39:31,433 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2020-08-20 02:39:31,474 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2020-08-20 02:39:31,477 [ 1] INFO  Unity: ItemManager:Init[Id:1,Count:5]
-2020-08-20 02:39:31,478 [ 1] INFO  Unity: ItemManager:Init[Id:2,Count:100]
-2020-08-20 02:39:31,478 [ 1] INFO  Unity: ItemManager:Init[Id:3,Count:100]
-2020-08-20 02:39:31,481 [ 1] ERROR Unity: Message handler exception:, Object reference not set to an instance of an object, Assembly-CSharp,   at Managers.BagManager.Reset () [0x0003a] in D:\2\s8\SecondGame\Src\Client\Assets\Scripts\Managers\BagManager.cs:36 
-  at Managers.BagManager.Init (SkillBridge.Message.NBagInfo info) [0x00075] in D:\2\s8\SecondGame\Src\Client\Assets\Scripts\Managers\BagManager.cs:28 
-  at Services.UserService.OnGameEnter (System.Object sender, SkillBridge.Message.UserGameEnterResponse response) [0x00065] in D:\2\s8\SecondGame\Src\Client\Assets\Scripts\Services\UserService.cs:252 
-  at Network.MessageDistributer`1[System.Object].RaiseEvent[UserGameEnterResponse] (System.Object sender, SkillBridge.Message.UserGameEnterResponse msg) [0x00000] in <filename unknown>:0 
-2020-08-20 02:39:31,482 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, Managers.BagManager.Reset () (at Assets/Scripts/Managers/BagManager.cs:36)
-Managers.BagManager.Init (SkillBridge.Message.NBagInfo info) (at Assets/Scripts/Managers/BagManager.cs:28)
-Services.UserService.OnGameEnter (System.Object sender, SkillBridge.Message.UserGameEnterResponse response) (at Assets/Scripts/Services/UserService.cs:252)
-Network.MessageDistributer`1[System.Object].RaiseEvent[UserGameEnterResponse] (System.Object sender, SkillBridge.Message.UserGameEnterResponse msg)
-}</args></log4net.Error>
-2020-08-20 02:39:31,491 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
-2020-08-20 02:39:31,492 [ 1] INFO  Unity: AddCharacter:3:ÁÎ¿¡²Å01 Map:1 Entity:(3:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2020-08-20 02:39:31,495 [ 1] INFO  Unity: LoadLevel: MainCity
-2020-08-20 02:39:31,496 [ 1] INFO  Unity: OnMapCharacterEnter:1
-2020-08-20 02:39:31,497 [ 1] INFO  Unity: LoadLevel: MainCity
-2020-08-20 02:39:32,014 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2020-08-22 00:05:32,314 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2020-08-22 00:05:36,036 [ 1] INFO  Unity: OnLogin:Success [None]
+2020-08-22 00:05:36,038 [ 1] INFO  Unity: LoadLevel: CharSelect
+2020-08-22 00:05:38,375 [ 1] INFO  Unity: LevelLoadCompleted:1
+2020-08-22 00:05:39,438 [ 1] INFO  Unity: Select Char:[1]ÁÎ¿¡²Å001[Wizard]
+2020-08-22 00:05:40,593 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2020-08-22 00:05:40,722 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2020-08-22 00:05:40,727 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
+2020-08-22 00:05:40,729 [ 1] INFO  Unity: AddCharacter:1:ÁÎ¿¡²Å001 Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2020-08-22 00:05:40,731 [ 1] INFO  Unity: LoadLevel: MainCity
+2020-08-22 00:05:40,732 [ 1] INFO  Unity: OnMapCharacterEnter:1
+2020-08-22 00:05:40,733 [ 1] INFO  Unity: LoadLevel: MainCity
+2020-08-22 00:05:43,910 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2020-08-20 02:39:32,114 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2020-08-22 00:05:44,064 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2020-08-20 02:39:32,127 [ 1] WARN  Unity: MainPlayerCamera[-253680] Awake
+2020-08-22 00:05:44,084 [ 1] WARN  Unity: MainPlayerCamera[-227212] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:25)
 
-2020-08-20 02:39:32,128 [ 1] WARN  Unity: GameObjectManager[-253632] Awake
+2020-08-22 00:05:44,085 [ 1] WARN  Unity: GameObjectManager[-227164] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:25)
 
-2020-08-20 02:39:32,133 [ 1] WARN  Unity: UIMain[121554] Awake
+2020-08-22 00:05:44,094 [ 1] WARN  Unity: UIMain[77860] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:25)
 
-2020-08-20 02:39:32,134 [ 1] WARN  Unity: UIWorldElementManager[122424] Awake
+2020-08-22 00:05:44,095 [ 1] WARN  Unity: UIWorldElementManager[78730] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:25)
 
-2020-08-20 02:39:32,161 [ 1] INFO  Unity: LevelLoadCompleted:1
-2020-08-20 02:39:32,163 [ 1] WARN  Unity: UI Minimap Start119318
+2020-08-22 00:05:44,192 [ 1] INFO  Unity: LevelLoadCompleted:1
+2020-08-22 00:05:44,195 [ 1] WARN  Unity: UI Minimap Start75624
 UnityEngine.Debug:LogWarning(Object)
 UIMinimap:Start() (at Assets/Scripts/UI/Minimap/UIMinimap.cs:21)
 
-2020-08-20 02:39:32,164 [ 1] WARN  Unity: MinimapManager.Instance.Minimap[119318] Set
+2020-08-22 00:05:44,196 [ 1] WARN  Unity: MinimapManager.Instance.Minimap[75624] Set
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MinimapManager:set_Minimap(UIMinimap) (at Assets/Scripts/Managers/MinimapManager.cs:18)
 UIMinimap:Start() (at Assets/Scripts/UI/Minimap/UIMinimap.cs:22)
 
-2020-08-20 02:39:32,588 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2020-08-22 00:05:44,847 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2020-08-20 02:39:32,600 [ 1] WARN  Unity: MainPlayerCamera[-259116] Awake
+2020-08-22 00:05:44,860 [ 1] WARN  Unity: MainPlayerCamera[-232810] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:25)
 
-2020-08-20 02:39:32,601 [ 1] WARN  Unity: GameObjectManager[-259068] Awake
+2020-08-22 00:05:44,860 [ 1] WARN  Unity: GameObjectManager[-232762] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:25)
 
-2020-08-20 02:39:32,601 [ 1] WARN  Unity: UIMain[125204] Awake
+2020-08-22 00:05:44,861 [ 1] WARN  Unity: UIMain[81510] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:25)
 
-2020-08-20 02:39:32,602 [ 1] WARN  Unity: UIWorldElementManager[126074] Awake
+2020-08-22 00:05:44,861 [ 1] WARN  Unity: UIWorldElementManager[82380] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:25)
 
-2020-08-20 02:39:32,626 [ 1] INFO  Unity: LevelLoadCompleted:1
-2020-08-20 02:43:22,806 [ 1] INFO  Unity: Character_3_ÁÎ¿¡²Å01 OnDestroy :ID:3 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
-2020-08-20 02:43:22,807 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2020-08-20 02:43:22,808 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2020-08-22 00:05:44,959 [ 1] INFO  Unity: LevelLoadCompleted:1
+2020-08-22 00:05:47,320 [ 1] INFO  Unity: MoveForward
+2020-08-22 00:05:47,430 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:47,442 [ 1] INFO  Unity: SetDirection:(98, -20, 0)
+2020-08-22 00:05:47,442 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:47,476 [ 1] INFO  Unity: SetDirection:(92, -39, 0)
+2020-08-22 00:05:47,477 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:47,564 [ 1] INFO  Unity: SetDirection:(84, -55, 0)
+2020-08-22 00:05:47,564 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:47,651 [ 1] INFO  Unity: SetDirection:(70, -71, 0)
+2020-08-22 00:05:47,652 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:47,756 [ 1] INFO  Unity: SetDirection:(54, -84, 0)
+2020-08-22 00:05:47,756 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:47,860 [ 1] INFO  Unity: SetDirection:(36, -93, 0)
+2020-08-22 00:05:47,866 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:47,965 [ 1] INFO  Unity: SetDirection:(17, -99, 0)
+2020-08-22 00:05:47,966 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:48,105 [ 1] INFO  Unity: SetDirection:(-1, -100, 0)
+2020-08-22 00:05:48,106 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:48,559 [ 1] INFO  Unity: SetDirection:(-19, -98, 0)
+2020-08-22 00:05:48,559 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:48,680 [ 1] INFO  Unity: SetDirection:(-38, -92, 0)
+2020-08-22 00:05:48,680 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:48,767 [ 1] INFO  Unity: SetDirection:(-55, -83, 0)
+2020-08-22 00:05:48,768 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:48,924 [ 1] INFO  Unity: SetDirection:(-69, -72, 0)
+2020-08-22 00:05:48,925 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:50,006 [ 1] INFO  Unity: SetDirection:(-82, -58, 0)
+2020-08-22 00:05:50,007 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:50,128 [ 1] INFO  Unity: SetDirection:(-90, -43, 0)
+2020-08-22 00:05:50,128 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:50,303 [ 1] INFO  Unity: SetDirection:(-96, -26, 0)
+2020-08-22 00:05:50,303 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:52,308 [ 1] INFO  Unity: SetDirection:(-100, -9, 0)
+2020-08-22 00:05:52,314 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:52,867 [ 1] INFO  Unity: SetDirection:(-100, 9, 0)
+2020-08-22 00:05:52,867 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:53,024 [ 1] INFO  Unity: SetDirection:(-96, 26, 0)
+2020-08-22 00:05:53,024 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:53,529 [ 1] INFO  Unity: SetDirection:(-90, 44, 0)
+2020-08-22 00:05:53,530 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:53,669 [ 1] INFO  Unity: SetDirection:(-80, 60, 0)
+2020-08-22 00:05:53,670 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:54,122 [ 1] INFO  Unity: SetDirection:(-68, 74, 0)
+2020-08-22 00:05:54,123 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:54,803 [ 1] INFO  Unity: SetDirection:(-53, 85, 0)
+2020-08-22 00:05:54,804 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:54,960 [ 1] INFO  Unity: SetDirection:(-36, 93, 0)
+2020-08-22 00:05:54,960 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:56,390 [ 1] INFO  Unity: SetDirection:(-19, 98, 0)
+2020-08-22 00:05:56,391 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:56,898 [ 1] INFO  Unity: SetPosition:(3373, 4046, 805)
+2020-08-22 00:05:56,899 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD300
+2020-08-22 00:05:59,356 [ 1] INFO  Unity: Stop
+2020-08-22 00:05:59,356 [ 1] INFO  Unity: MapEntityUpdateRequest:ID:1 POS:SkillBridge.Message.NVector3 DIRSkillBridge.Message.NVector3 SPD0
+2020-08-22 00:06:00,508 [ 1] INFO  Unity: TestManager.OnNpcShop :NPC:[3°£²¼¶û] Type:Functional Function:InvokeInstance
+2020-08-22 00:06:07,325 [ 1] INFO  Unity: TestManager.OnNpcShop :NPC:[3°£²¼¶û] Type:Functional Function:InvokeInstance
+2020-08-22 00:06:14,656 [ 1] INFO  Unity: Character_1_ÁÎ¿¡²Å001 OnDestroy :ID:1 POS:(3225, 4786, 805) DIR:(-19, 98, 0) SPD:0 
+2020-08-22 00:06:14,661 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2020-08-22 00:06:14,662 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:181)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:176)
